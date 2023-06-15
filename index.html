@@ -10,6 +10,27 @@
 <body>
 	<div id="app">
 
+		<header>
+			<div class="container header_container">
+				<div class="header_left">
+					<img src="http://pluspng.com/img-png/spotify-logo-png-open-2000.png" alt="">
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="discs_container">
+					<div class="disc" v-for="(disc, i) in arrDiscs">
+						<img :src="disc.poster" />
+						<h3>{{ disc.title }}</h3>
+						<small>{{ disc.author }}</small>
+						<strong>{{ disc.year }}</strong>
+					</div>
+				</div>
+			</div>
+		</main>
+
 	</div>
 
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
